@@ -24,12 +24,12 @@ public class secondActivity extends AppCompatActivity {
         double peso = intent.getDoubleExtra(MainActivity.EXTRA_PESO, 0);
         double altura = intent.getDoubleExtra(MainActivity.EXTRA_ALTURA, 0);
         double imc = intent.getDoubleExtra(MainActivity.EXTRA_IMC, 0);
-        String serio = intent.getStringExtra(MainActivity.EXTRA_SERIO);
+        String priority = intent.getStringExtra(MainActivity.EXTRA_PRIORITY);
         String imcFormat = new DecimalFormat("##0.00").format(imc);
 
         showPeso.setText(Double.toString(peso));
         showAltura.setText(Double.toString(altura));
         showIMC.setText(Double.toString(Double.parseDouble(imcFormat)));
-        showSituacao.setText(serio);
+        showSituacao.setText(priority);
     }
 }
